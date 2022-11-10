@@ -158,10 +158,11 @@ static void task_led(void *pvParameters) {
 			 pwm_channel_update_duty(PWM0, &pwm_channel_pin, rgb.r); //red
 			 pwm_channel_update_duty(PWM0, &pwm_channel_pa2, rgb.g); //green
 			 pwm_channel_update_duty(PWM0, &pwm_channel_pc19, rgb.b); //blue
- 			 delay_ms(10);
+ 			 //delay_ms(10);
 			 
 			 
 		 }
+		 vTaskDelay(10);
 // 		/* fade in */
 // 		for(duty = 0; duty <= 255; duty++){
 // 			//printf("In red\n");
@@ -218,6 +219,7 @@ static void task_led(void *pvParameters) {
 // 			}
 // 		}
  	}
+	 
 }
 
 /************************************************************************/
